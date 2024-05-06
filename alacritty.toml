@@ -150,9 +150,6 @@ thickness = 0.15  # Default: 0.15
 
 [terminal]
 
-# Controls the OSC 52 behavior for clipboard interactions
-osc52 = "CopyPaste"  # Default: "OnlyCopy"
-
 #########
 # MOUSE #
 #########
@@ -194,32 +191,38 @@ alphabet = "jfkdls;ahgurieowpq"  # Default: "jfkdls;ahgurieowpq"
 # Define keyboard bindings here
 # Example placeholder (actual bindings need to be defined based on user preference)
 bindings = [
- 	{key = "Space", mods = "Control", chars = "\u0000"}
-    # { key = "Key", mods = "Modifiers", action = "Action" },
+ 	{key = "Space", mods = "Control", chars = "\u0000"},
+    { key = "v", mods = "Control | Shift", action = "Paste" },
     # { key = "Key", mods = "Modifiers", chars = "Characters to send" },
     # ...
 ]
 
+# Colors (Tokyo Night)
+# Source https//github.com/zatchheems/tokyo-night-alacritty-theme
+
+# Default colors
 [colors.primary]
-background = "#1a1b26"
-foreground = "#a9b1d6"
+background = '#1a1b26'
+foreground = '#a9b1d6'
 
+# Normal colors
 [colors.normal]
-black ='#32344a'
-red =     '#f7768e'
-green =   '#9ece6a'
-yellow =  '#e0af68'
-blue =    '#7aa2f7'
+black   = '#32344a'
+red     = '#f7768e'
+green   = '#9ece6a'
+yellow  = '#e0af68'
+blue    = '#7aa2f7'
 magenta = '#ad8ee6'
-cyan =    '#449dab'
-white =   '#787c99'
+cyan    = '#449dab'
+white   = '#787c99'
 
+# Bright colors
 [colors.bright]
-black =   '#444b6a'
-red =     '#ff7a93'
-green =   '#b9f27c'
-yellow =  '#ff9e64'
-blue =    '#7da6ff'
+black   = '#444b6a'
+red     = '#ff7a93'
+green   = '#b9f27c'
+yellow  = '#ff9e64'
+blue    = '#7da6ff'
 magenta = '#bb9af7'
-cyan =    '#0db9d7'
-white =   '#acb0d0'
+cyan    = '#0db9d7'
+white   = '#acb0d0'
