@@ -28,6 +28,22 @@
             "keys": "ctrl+4"
         },
         {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "ctrl+1"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+alt+1"
         },
@@ -90,22 +106,6 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "keys": "ctrl+1"
-        },
-        {
-            "command": 
-            {
                 "action": "switchToTab",
                 "index": 1
             },
@@ -123,17 +123,17 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 6
+                "index": 5
             },
-            "keys": "ctrl+7"
+            "keys": "ctrl+6"
         },
         {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 5
+                "index": 6
             },
-            "keys": "ctrl+6"
+            "keys": "ctrl+7"
         },
         {
             "command": 
@@ -388,7 +388,7 @@
             "yellow": "#C4A000"
         },
         {
-            "background": "#24283B",
+            "background": "#000000",
             "black": "#414868",
             "blue": "#7AA2F7",
             "brightBlack": "#414868",
@@ -399,14 +399,14 @@
             "brightRed": "#F7768E",
             "brightWhite": "#C0CAF5",
             "brightYellow": "#E0AF68",
-            "cursorColor": "#C0CAF5",
+            "cursorColor": "#FFFFFF",
             "cyan": "#7DCFFF",
-            "foreground": "#A9B1DC",
+            "foreground": "#CCCCCC",
             "green": "#73DACA",
             "name": "Tokyo Night Storm",
             "purple": "#BB9AF7",
             "red": "#F7768E",
-            "selectionBackground": "#28344A",
+            "selectionBackground": "#FFFFFF",
             "white": "#C0CAF5",
             "yellow": "#E0AF68"
         },
