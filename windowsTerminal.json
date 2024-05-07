@@ -31,17 +31,9 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 0
+                "index": 7
             },
-            "keys": "ctrl+1"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
+            "keys": "ctrl+8"
         },
         {
             "command": "unbound",
@@ -98,10 +90,18 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 7
+                "action": "copy",
+                "singleLine": false
             },
-            "keys": "ctrl+8"
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "ctrl+1"
         },
         {
             "command": 
@@ -123,17 +123,17 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 5
+                "index": 6
             },
-            "keys": "ctrl+6"
+            "keys": "ctrl+7"
         },
         {
             "command": 
             {
                 "action": "switchToTab",
-                "index": 6
+                "index": 5
             },
-            "keys": "ctrl+7"
+            "keys": "ctrl+6"
         },
         {
             "command": 
@@ -149,6 +149,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "disableAnimations": true,
     "firstWindowPreference": "defaultProfile",
     "initialCols": 100,
     "initialPosition": ",",
@@ -167,14 +168,15 @@
             "backgroundImage": "C:\\Documents\\Pictures\\dbb01wr-597e09e7-ae12-4a4b-912e-fa063274f72b.png",
             "backgroundImageOpacity": 0.05,
             "bellStyle": "none",
-            "colorScheme": "Ubuntu-ColorScheme",
+            "colorScheme": "Tokyo Night Storm",
             "cursorShape": "filledBox",
             "font": 
             {
                 "face": "CaskaydiaMono Nerd Font",
                 "size": 10.0
             },
-            "scrollbarState": "visible",
+            "padding": "8",
+            "scrollbarState": "hidden",
             "startingDirectory": null,
             "useAtlasEngine": true
         },
@@ -483,5 +485,6 @@
     "showTabsInTitlebar": false,
     "showTerminalTitleInTitlebar": true,
     "startupActions": "new-tab -p \"Ubuntu\"",
+    "tabWidthMode": "equal",
     "themes": []
 }
