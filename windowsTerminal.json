@@ -30,6 +30,30 @@
         {
             "command": 
             {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 0
+            },
+            "keys": "ctrl+1"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 4
+            },
+            "keys": "ctrl+5"
+        },
+        {
+            "command": 
+            {
                 "action": "switchToTab",
                 "index": 7
             },
@@ -83,30 +107,6 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 4
-            },
-            "keys": "ctrl+5"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 0
-            },
-            "keys": "ctrl+1"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
                 "index": 1
             },
             "keys": "ctrl+2"
@@ -123,14 +123,6 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 6
-            },
-            "keys": "ctrl+7"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
                 "index": 5
             },
             "keys": "ctrl+6"
@@ -139,9 +131,21 @@
             "command": 
             {
                 "action": "switchToTab",
+                "index": 6
+            },
+            "keys": "ctrl+7"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
                 "index": 4294967295
             },
             "keys": "ctrl+9"
+        },
+        {
+            "command": "resetFontSize",
+            "keys": "ctrl+shift+plus"
         }
     ],
     "alwaysShowTabs": false,
@@ -165,8 +169,8 @@
     {
         "defaults": 
         {
-            "backgroundImage": "C:\\Documents\\Pictures\\dbb01wr-597e09e7-ae12-4a4b-912e-fa063274f72b.png",
-            "backgroundImageOpacity": 0.05,
+            "backgroundImage": "C:\\Documents\\Pictures\\360_F_318304464_0dmt7x9Q7ERSnCfcODSCOXXrtmL2dNAT.jpg",
+            "backgroundImageOpacity": 0.08,
             "bellStyle": "none",
             "colorScheme": "Tokyo Night Storm",
             "cursorShape": "filledBox",
