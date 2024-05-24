@@ -33,7 +33,8 @@ config.window_background_image_hsb = {
 
 config.window_background_opacity = 1.0
 
-config.window_decorations = "RESIZE | TITLE"
+--config.window_decorations = "RESIZE | TITLE"
+config.window_decorations = "RESIZE"
 
 -- and finally, return the configuration to wezterm
 return config
