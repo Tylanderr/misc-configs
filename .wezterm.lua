@@ -21,7 +21,7 @@ config.font_size = 10
 config.term = "xterm-256color"
 config.enable_tab_bar = false
 
-config.window_background_image = 'C:\\Users\\hardi\\Pictures\\Saved Pictures\\minimalist-planet.jpg'
+config.window_background_image = 'C:\\Users\\hardi\\Documents\\TermBG\\6.jpg'
 config.window_background_image_hsb = {
 	brightness = .01
 }
