@@ -6,7 +6,6 @@ local mux = wezterm.mux
 wezterm.on("gui-startup", function()
   local tab, pane, window = mux.spawn_window{}
   window:gui_window():maximize()
-  window:set_title 'WSL'
 end)
 
 -- This will hold the configuration.
