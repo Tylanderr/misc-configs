@@ -1,4 +1,3 @@
--- Pull in the wezterm API
 local wezterm = require 'wezterm'
 
 local mux = wezterm.mux
@@ -8,7 +7,6 @@ wezterm.on("gui-startup", function()
   window:gui_window():maximize()
 end)
 
--- This will hold the configuration.
 local config = wezterm.config_builder()
 config.default_domain = 'WSL:Ubuntu'
 config.check_for_updates = false
@@ -25,8 +23,6 @@ config.window_background_image_hsb = {
 	brightness = .01
 }
 
---config.window_decorations = "RESIZE | TITLE"
 config.window_decorations = "RESIZE"
 
--- and finally, return the configuration to wezterm
 return config
