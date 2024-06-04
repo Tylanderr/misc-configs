@@ -20,9 +20,22 @@ config.enable_tab_bar = false
 
 config.window_background_image = 'C:\\Users\\hardi\\Documents\\TermBG\\6.jpg'
 config.window_background_image_hsb = {
-	brightness = .01
+  brightness = .01
 }
 
 config.window_decorations = "RESIZE"
+
+config.keys = {
+  {
+    key = 't',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+  {
+    key = 'w',
+    mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  }
+}
 
 return config
