@@ -1,0 +1,58 @@
+{
+  "custom-layouts": [
+    {
+      "uuid": "{4A650681-D324-4849-ACB6-14516DBBB71C}",
+      "name": "Vertical 1 screen",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1080,
+        "ref-height": 1880,
+        "zones": [
+          {
+            "X": 5,
+            "Y": 10,
+            "width": 1070,
+            "height": 1860
+          },
+          {
+            "X": 40,
+            "Y": 340,
+            "width": 1000,
+            "height": 1200
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{E1555375-60A2-4B03-80C4-A8201FF9F1EB}",
+      "name": "Main",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1920,
+        "ref-height": 1040,
+        "zones": [
+          {
+            "X": 14,
+            "Y": 20,
+            "width": 1892,
+            "height": 1000
+          },
+          {
+            "X": 240,
+            "Y": 100,
+            "width": 1440,
+            "height": 840
+          },
+          {
+            "X": 415,
+            "Y": 180,
+            "width": 1090,
+            "height": 680
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    }
+  ]
+}
