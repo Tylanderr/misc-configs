@@ -30,25 +30,55 @@
       "type": "canvas",
       "info": {
         "ref-width": 1920,
-        "ref-height": 1040,
+        "ref-height": 1032,
         "zones": [
           {
             "X": 14,
-            "Y": 20,
+            "Y": 19,
             "width": 1892,
-            "height": 1000
+            "height": 992
           },
           {
             "X": 240,
-            "Y": 100,
+            "Y": 99,
             "width": 1440,
-            "height": 840
+            "height": 833
           },
           {
             "X": 415,
-            "Y": 180,
+            "Y": 178,
             "width": 1090,
-            "height": 680
+            "height": 674
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{7A65E584-123C-47C7-9388-BB8E480A3C03}",
+      "name": "Main Win 11",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1920,
+        "ref-height": 1032,
+        "zones": [
+          {
+            "X": 8,
+            "Y": 10,
+            "width": 1904,
+            "height": 1003
+          },
+          {
+            "X": 240,
+            "Y": 99,
+            "width": 1440,
+            "height": 833
+          },
+          {
+            "X": 415,
+            "Y": 178,
+            "width": 1090,
+            "height": 674
           }
         ],
         "sensitivity-radius": 20
