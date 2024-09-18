@@ -34,7 +34,7 @@ term = "xterm-256color"
 dimensions = { columns = 269, lines = 64 }  # Default: columns = 0, lines = 0
 
 # Window startup position
-position = {x = 5, y = 10}  # Default: "None"
+position = {x = 5, y = 13}  # Default: "None"
 
 # Padding
 padding = { x = 5, y = 5 }  # Default: x = 0, y = 0
