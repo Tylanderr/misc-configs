@@ -1,0 +1,232 @@
+# https://alacritty.org/config-alacritty.html
+
+###########
+# GENERAL #
+###########
+
+# Import additional configuration files
+import = []
+
+# Shell program and its arguments
+# Default for Linux/BSD/macOS is $SHELL or user's login shell
+# Default for Windows is "powershell"
+[shell]
+program = "Ubuntu"
+
+#######
+# ENV #
+#######
+
+[env]
+# Environment variables
+term = "xterm-256color"
+
+##########
+# WINDOW #
+##########
+
+[window]
+
+# Opacity
+#opacity = 0.96  # Default: 1.0
+
+# Window dimensions
+dimensions = { columns = 270, lines = 64 }  # Default: columns = 0, lines = 0
+
+# Window startup position
+position = {x = 2, y = 10}  # Default: "None"
+
+# Padding
+padding = { x = 5, y = 5 }  # Default: x = 0, y = 0
+
+# Dynamic padding
+dynamic_padding = true  # Default: false
+
+# Window decorations
+decorations = "Buttonless"  # Default: "Full"
+
+# Blur (macOS/KDE Wayland only)
+blur = false  # Default: false
+
+# Startup mode
+#startup_mode = "Maximized"  # Default: "Windowed"
+
+# Window title
+title = "Alacritty"  # Default: "Alacritty"
+
+# Dynamic title
+dynamic_title = false  # Default: true
+
+# Window class (Linux/BSD only)
+class = { instance = "Alacritty", general = "Alacritty" }  # Default: instance = "Alacritty", general = "Alacritty"
+
+# Decorations theme variant
+decorations_theme_variant = "None"  # Default: "None"
+
+# Resize increments
+resize_increments = false  # Default: false
+
+# Option as Alt (macOS only)
+option_as_alt = "None"  # Default: "None"
+
+#############
+# SCROLLING #
+#############
+
+[scrolling]
+
+# Maximum number of lines in the scrollback buffer
+history = 0  # Default: 10000
+
+# Number of lines scrolled for every input scroll increment
+multiplier = 3  # Default: 3
+
+########
+# FONT #
+########
+
+[font]
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular"}
+size = 10
+offset = { x = 0, y = 0 }
+
+########
+# BELL #
+########
+
+[bell]
+
+# Visual bell animation effect
+animation = "Linear"  # Default: "Linear"
+
+# Duration of the visual bell flash in milliseconds
+duration = 0  # Default: 0
+
+# Visual bell animation color
+color = "#ffffff"  # Default: "#ffffff"
+
+# Command executed when the bell is rung
+command = "None"  # Default: "None"
+
+#############
+# SELECTION #
+#############
+
+[selection]
+
+# Characters that are used as separators for "semantic words" in Alacritty
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\\t"  # Default: ",│`|:\"' ()[]{}<>\\t"
+
+# When set to true, selected text will be copied to the primary clipboard
+save_to_clipboard = false  # Default: false
+
+##########
+# CURSOR #
+##########
+
+[cursor]
+
+# Cursor style
+style = { shape = "Block", blinking = "On" }  # Default: shape = "Block", blinking = "Off"
+
+# Vi mode cursor style (falls back to the active value of the normal cursor if "None")
+vi_mode_style = "None"  # Default: "None"
+
+# Cursor blinking interval in milliseconds
+blink_interval = 750  # Default: 750
+
+# Time after which cursor stops blinking, in seconds
+blink_timeout = 0  # Default: 5
+
+# When true, the cursor will be rendered as a hollow box when the window is not focused
+unfocused_hollow = true  # Default: true
+
+# Thickness of the cursor relative to the cell width
+thickness = 0.15  # Default: 0.15
+
+############
+# TERMINAL #
+############
+
+[terminal]
+
+#########
+# MOUSE #
+#########
+
+[mouse]
+
+# When true, the cursor is temporarily hidden when typing
+hide_when_typing = true  # Default: false
+
+# Mouse bindings (actual bindings need to be defined as per user preference)
+# Example: bindings = [{ mouse = "Left", action = "Paste" }]
+bindings = []
+
+#########
+# HINTS #
+#########
+
+[hints]
+
+# Define the keys used for hint labels
+alphabet = "jfkdls;ahgurieowpq"  # Default: "jfkdls;ahgurieowpq"
+
+# Enable specific hints
+#[[hints.enabled]]
+# Example configuration (actual settings to be defined based on user preference)
+# regex = "..."
+# hyperlinks = true
+# post_processing = true
+# persist = false
+# action = "..."
+# command = "..."
+# binding = { key = "...", mods = "...", mode = "..." }
+# mouse = { mods = "...", enabled = true }
+
+# KEYBOARD section of Alacritty configuration
+
+[keyboard]
+
+# Define keyboard bindings here
+# Example placeholder (actual bindings need to be defined based on user preference)
+bindings = [
+ 	{key = "Space", mods = "Control", chars = "\u0000"},
+    { key = "v", mods = "Control | Shift", action = "Paste" },
+    # { key = "Key", mods = "Modifiers", chars = "Characters to send" },
+    # ...
+]
+
+# Colors (Tokyo Night)
+# Source https//github.com/zatchheems/tokyo-night-alacritty-theme
+
+# Default colors
+[colors.primary]
+background = '#1a1b26'
+foreground = '#a9b1d6'
+
+# Normal colors
+[colors.normal]
+black   = '#32344a'
+red     = '#f7768e'
+green   = '#9ece6a'
+yellow  = '#e0af68'
+blue    = '#7aa2f7'
+magenta = '#ad8ee6'
+cyan    = '#449dab'
+white   = '#787c99'
+
+# Bright colors
+[colors.bright]
+black   = '#444b6a'
+red     = '#ff7a93'
+green   = '#b9f27c'
+yellow  = '#ff9e64'
+blue    = '#7da6ff'
+magenta = '#bb9af7'
+cyan    = '#0db9d7'
+white   = '#acb0d0'
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#f5e0dc"
