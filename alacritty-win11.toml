@@ -28,7 +28,7 @@ term = "xterm-256color"
 [window]
 
 # Opacity
-#opacity = 0.96  # Default: 1.0
+opacity = 0.96
 
 # Window dimensions
 dimensions = { columns = 270, lines = 64 }  # Default: columns = 0, lines = 0
