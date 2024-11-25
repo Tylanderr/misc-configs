@@ -25,18 +25,18 @@
       }
     },
     {
-      "uuid": "{E1555375-60A2-4B03-80C4-A8201FF9F1EB}",
-      "name": "Main",
+      "uuid": "{7A65E584-123C-47C7-9388-BB8E480A3C03}",
+      "name": "Main Win 11",
       "type": "canvas",
       "info": {
         "ref-width": 1920,
         "ref-height": 1032,
         "zones": [
           {
-            "X": 14,
-            "Y": 19,
-            "width": 1892,
-            "height": 992
+            "X": 9,
+            "Y": 15,
+            "width": 1902,
+            "height": 1002
           },
           {
             "X": 240,
@@ -55,19 +55,13 @@
       }
     },
     {
-      "uuid": "{7A65E584-123C-47C7-9388-BB8E480A3C03}",
-      "name": "Main Win 11",
+      "uuid": "{59A16EFF-E92A-4C59-A1CF-04073669B97A}",
+      "name": "Main",
       "type": "canvas",
       "info": {
         "ref-width": 1920,
         "ref-height": 1032,
         "zones": [
-          {
-            "X": 9,
-            "Y": 15,
-            "width": 1902,
-            "height": 1002
-          },
           {
             "X": 240,
             "Y": 99,
