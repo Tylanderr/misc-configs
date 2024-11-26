@@ -14,13 +14,13 @@ config.check_for_updates = false
 config.audible_bell = "Disabled"
 config.color_scheme = 'Tokyo Night'
 config.font = wezterm.font 'CaskaydiaMono Nerd Font'
-config.font_size = 10
+config.font_size = 9.5
 config.term = "xterm-256color"
 config.enable_tab_bar = false
 
-config.window_background_image = 'C:\\Users\\hardi\\Documents\\TermBG\\6.jpg'
+config.window_background_image = 'C:\\Documents\\TermBG\\07.jpg'
 config.window_background_image_hsb = {
-  brightness = .01
+  brightness = .005
 }
 
 config.window_decorations = "RESIZE"
