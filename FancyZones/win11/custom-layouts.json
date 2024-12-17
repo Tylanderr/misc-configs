@@ -1,24 +1,30 @@
 {
   "custom-layouts": [
     {
-      "uuid": "{4A650681-D324-4849-ACB6-14516DBBB71C}",
-      "name": "Vertical 1 screen",
+      "uuid": "{E1555375-60A2-4B03-80C4-A8201FF9F1EB}",
+      "name": "Main Win 10",
       "type": "canvas",
       "info": {
-        "ref-width": 1080,
-        "ref-height": 1880,
+        "ref-width": 1920,
+        "ref-height": 1032,
         "zones": [
           {
-            "X": 5,
-            "Y": 8,
-            "width": 1070,
-            "height": 1864
+            "X": 14,
+            "Y": 19,
+            "width": 1892,
+            "height": 992
           },
           {
-            "X": 40,
-            "Y": 340,
-            "width": 1000,
-            "height": 1200
+            "X": 240,
+            "Y": 99,
+            "width": 1440,
+            "height": 833
+          },
+          {
+            "X": 415,
+            "Y": 178,
+            "width": 1090,
+            "height": 674
           }
         ],
         "sensitivity-radius": 20
@@ -55,24 +61,60 @@
       }
     },
     {
-      "uuid": "{59A16EFF-E92A-4C59-A1CF-04073669B97A}",
-      "name": "Main",
+      "uuid": "{C8CBB037-CA70-4D91-8272-50729DE94EFE}",
+      "name": "Runescape",
       "type": "canvas",
       "info": {
         "ref-width": 1920,
-        "ref-height": 1032,
+        "ref-height": 1040,
         "zones": [
           {
-            "X": 240,
-            "Y": 99,
-            "width": 1440,
-            "height": 833
+            "X": 14,
+            "Y": 21,
+            "width": 772,
+            "height": 534
           },
           {
-            "X": 415,
-            "Y": 178,
-            "width": 1090,
-            "height": 674
+            "X": 490,
+            "Y": 21,
+            "width": 940,
+            "height": 658
+          },
+          {
+            "X": 792,
+            "Y": 21,
+            "width": 1113,
+            "height": 885
+          },
+          {
+            "X": 580,
+            "Y": 21,
+            "width": 775,
+            "height": 534
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{4A650681-D324-4849-ACB6-14516DBBB71C}",
+      "name": "Vertical 1 screen",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1080,
+        "ref-height": 1880,
+        "zones": [
+          {
+            "X": 5,
+            "Y": 8,
+            "width": 1070,
+            "height": 1864
+          },
+          {
+            "X": 40,
+            "Y": 340,
+            "width": 1000,
+            "height": 1200
           }
         ],
         "sensitivity-radius": 20
