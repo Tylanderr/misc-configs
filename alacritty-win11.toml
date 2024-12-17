@@ -25,13 +25,13 @@ term = "xterm-256color"
 [window]
 
 # Opacity
-opacity = 1
+opacity = 0.90
 
 # Window dimensions
-#dimensions = { columns = 270, lines = 64 }  # Default: columns = 0, lines = 0
+dimensions = { columns = 270, lines = 64 }  # Default: columns = 0, lines = 0
 
 # Window startup position
-#position = {x = 2, y = 15}  # Default: "None"
+position = {x = 2, y = 15}  # Default: "None"
 
 # Padding
 padding = { x = 5, y = 5 }  # Default: x = 0, y = 0
@@ -40,13 +40,13 @@ padding = { x = 5, y = 5 }  # Default: x = 0, y = 0
 dynamic_padding = true  # Default: false
 
 # Window decorations
-decorations = "None"  # Default: "Full"
+#decorations = "None"  # Default: "Full"
 
 # Blur (macOS/KDE Wayland only)
 blur = false  # Default: false
 
 # Startup mode
-startup_mode = "Maximized"  # Default: "Windowed"
+#startup_mode = "Maximized"  # Default: "Windowed"
 
 # Window title
 title = "Alacritty"  # Default: "Alacritty"
