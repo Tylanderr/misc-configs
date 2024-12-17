@@ -61,6 +61,30 @@
       }
     },
     {
+      "uuid": "{4A650681-D324-4849-ACB6-14516DBBB71C}",
+      "name": "Vertical 1 screen",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1080,
+        "ref-height": 1880,
+        "zones": [
+          {
+            "X": 5,
+            "Y": 8,
+            "width": 1070,
+            "height": 1864
+          },
+          {
+            "X": 40,
+            "Y": 340,
+            "width": 1000,
+            "height": 1200
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
       "uuid": "{C8CBB037-CA70-4D91-8272-50729DE94EFE}",
       "name": "Runescape",
       "type": "canvas",
@@ -91,30 +115,6 @@
             "Y": 21,
             "width": 775,
             "height": 534
-          }
-        ],
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{4A650681-D324-4849-ACB6-14516DBBB71C}",
-      "name": "Vertical 1 screen",
-      "type": "canvas",
-      "info": {
-        "ref-width": 1080,
-        "ref-height": 1880,
-        "zones": [
-          {
-            "X": 5,
-            "Y": 8,
-            "width": 1070,
-            "height": 1864
-          },
-          {
-            "X": 40,
-            "Y": 340,
-            "width": 1000,
-            "height": 1200
           }
         ],
         "sensitivity-radius": 20
