@@ -99,22 +99,10 @@
             "height": 534
           },
           {
-            "X": 490,
-            "Y": 21,
-            "width": 940,
-            "height": 658
-          },
-          {
             "X": 792,
             "Y": 21,
             "width": 1113,
             "height": 885
-          },
-          {
-            "X": 580,
-            "Y": 21,
-            "width": 775,
-            "height": 534
           }
         ],
         "sensitivity-radius": 20
