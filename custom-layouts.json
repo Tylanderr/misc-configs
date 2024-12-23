@@ -2,48 +2,12 @@
   "custom-layouts": [
     {
       "uuid": "{E1555375-60A2-4B03-80C4-A8201FF9F1EB}",
-      "name": "Main Win 10",
+      "name": "Main",
       "type": "canvas",
       "info": {
         "ref-width": 1920,
         "ref-height": 1032,
         "zones": [
-          {
-            "X": 14,
-            "Y": 19,
-            "width": 1892,
-            "height": 992
-          },
-          {
-            "X": 240,
-            "Y": 99,
-            "width": 1440,
-            "height": 833
-          },
-          {
-            "X": 415,
-            "Y": 178,
-            "width": 1090,
-            "height": 674
-          }
-        ],
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{7A65E584-123C-47C7-9388-BB8E480A3C03}",
-      "name": "Main Win 11",
-      "type": "canvas",
-      "info": {
-        "ref-width": 1920,
-        "ref-height": 1032,
-        "zones": [
-          {
-            "X": 9,
-            "Y": 15,
-            "width": 1902,
-            "height": 1002
-          },
           {
             "X": 240,
             "Y": 99,
@@ -68,12 +32,6 @@
         "ref-width": 1080,
         "ref-height": 1880,
         "zones": [
-          {
-            "X": 5,
-            "Y": 8,
-            "width": 1070,
-            "height": 1864
-          },
           {
             "X": 40,
             "Y": 340,
