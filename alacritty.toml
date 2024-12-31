@@ -28,10 +28,10 @@ term = "xterm-256color"
 opacity = 1
 
 # Window dimensions
-dimensions = { columns = 269, lines = 66 }  # Default: columns = 0, lines = 0
+dimensions = { columns = 270, lines = 65 }  # Default: columns = 0, lines = 0
 
 # Window startup position
-position = {x = 14, y = 19}  # Default: "None"
+position = {x = 2, y = 10}  # Default: "None"
 
 # Padding
 padding = { x = 5, y = 5 }  # Default: x = 0, y = 0
@@ -40,7 +40,7 @@ padding = { x = 5, y = 5 }  # Default: x = 0, y = 0
 dynamic_padding = true  # Default: false
 
 # Window decorations
-decorations = "None"  # Default: "Full"
+#decorations = "None"  # Default: "Full"
 
 # Blur (macOS/KDE Wayland only)
 blur = false  # Default: false
