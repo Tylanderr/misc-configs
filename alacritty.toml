@@ -8,7 +8,7 @@
 # Default for Linux/BSD/macOS is $SHELL or user's login shell
 # Default for Windows is "powershell"
 [terminal.shell]
-program = "Ubuntu"
+program = "wsl --cd ~"
 
 #######
 # ENV #
@@ -77,8 +77,8 @@ multiplier = 3  # Default: 3
 ########
 
 [font]
-normal = { family = "CaskaydiaMono Nerd Font", style = "Regular"}
-size = 12
+normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular"}
+size = 11
 offset = { x = 0, y = 0 }
 
 ########
