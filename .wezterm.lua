@@ -7,6 +7,10 @@ wezterm.on("gui-startup", function()
   window:gui_window():maximize()
 end)
 
+wezterm.on('format-window-title', function ()
+  return "Wezterm"
+end)
+
 local config = wezterm.config_builder()
 config.default_domain = 'WSL:Ubuntu'
 config.check_for_updates = false
@@ -23,7 +27,7 @@ config.window_background_image_hsb = {
   brightness = .008
 }
 
-config.window_decorations = "RESIZE"
+--config.window_decorations = "RESIZE"
 
 config.keys = {
   {
