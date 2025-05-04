@@ -22,16 +22,16 @@ config.font_size = 11
 config.term = "xterm-256color"
 config.enable_tab_bar = false
 
-config.window_background_image_hsb = {
-  brightness = .02
-}
-
 config.window_decorations = "RESIZE"
+config.window_background_image_hsb = {
+	brightness = .02
+}
+local background = 'C:\\Documents\\TermBG\\11.jpg'
 
 wezterm.on('toggle-background', function(window, pane)
     local overrides = window:get_config_overrides() or {}
     if not overrides.window_background_image then
-        overrides.window_background_image = 'C:\\Documents\\TermBG\\11.jpg'
+        overrides.window_background_image = background
     else
         overrides.window_background_image = nil
     end
