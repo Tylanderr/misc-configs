@@ -27,6 +27,8 @@ config.window_background_image_hsb = {
 	brightness = .02
 }
 local background = 'C:\\Documents\\TermBG\\11.jpg'
+local opacity = 1
+config.window_background_opacity = opacity
 
 wezterm.on('toggle-background', function(window, pane)
     local overrides = window:get_config_overrides() or {}
@@ -36,6 +38,16 @@ wezterm.on('toggle-background', function(window, pane)
         overrides.window_background_image = nil
     end
     window:set_config_overrides(overrides)
+end)
+
+wezterm.on('toggle-opacity', function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  if not overrides.window_background_opacity then
+    overrides.window_background_opacity = 0.95
+  else
+    overrides.window_background_opacity = nil
+  end
+  window:set_config_overrides(overrides)
 end)
 
 config.keys = {
@@ -52,7 +64,7 @@ config.keys = {
   {
     key = 'B',
     mods = 'CTRL',
-    action = wezterm.action.EmitEvent 'toggle-background',
+    action = wezterm.action.EmitEvent 'toggle-opacity',
   },
 }
 
