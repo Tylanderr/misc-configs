@@ -26,18 +26,24 @@ config.window_decorations = "RESIZE"
 config.window_background_image_hsb = {
 	brightness = .02
 }
-local background = 'C:\\Documents\\TermBG\\11.jpg'
+
+local background = 'C:\\Documents\\TermBG\\02.jpg'
 local opacity = 1
 config.window_background_opacity = opacity
+config.window_background_image = background
 
+-- Event handler to toggle the background image on and off
 wezterm.on('toggle-background', function(window, pane)
-    local overrides = window:get_config_overrides() or {}
-    if not overrides.window_background_image then
-        overrides.window_background_image = background
-    else
-        overrides.window_background_image = nil
-    end
-    window:set_config_overrides(overrides)
+  local overrides = window:get_config_overrides() or {}
+  local current = overrides.window_background_image
+  if current == nil then
+    overrides.window_background_image = ''
+  elseif current == '' then
+    overrides.window_background_image = background_image
+  else
+    overrides.window_background_image = ''
+  end
+  window:set_config_overrides(overrides)
 end)
 
 wezterm.on('toggle-opacity', function(window, pane)
