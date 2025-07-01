@@ -9,10 +9,16 @@
         "ref-height": 1032,
         "zones": [
           {
-            "X": 240,
-            "Y": 99,
-            "width": 1440,
-            "height": 833
+            "X": 385,
+            "Y": 144,
+            "width": 1150,
+            "height": 743
+          },
+          {
+            "X": 10,
+            "Y": 10,
+            "width": 1900,
+            "height": 1012
           }
         ],
         "sensitivity-radius": 20
@@ -24,37 +30,19 @@
       "type": "canvas",
       "info": {
         "ref-width": 1080,
-        "ref-height": 1872,
+        "ref-height": 1920,
         "zones": [
           {
-            "X": 40,
-            "Y": 338,
-            "width": 1000,
-            "height": 1194
-          }
-        ],
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{C8CBB037-CA70-4D91-8272-50729DE94EFE}",
-      "name": "Runescape",
-      "type": "canvas",
-      "info": {
-        "ref-width": 1920,
-        "ref-height": 1032,
-        "zones": [
-          {
-            "X": 0,
-            "Y": 0,
-            "width": 776,
-            "height": 532
+            "X": 84,
+            "Y": 434,
+            "width": 909,
+            "height": 1042
           },
           {
-            "X": 806,
-            "Y": 0,
-            "width": 1114,
-            "height": 1032
+            "X": 9,
+            "Y": 9,
+            "width": 1059,
+            "height": 1899
           }
         ],
         "sensitivity-radius": 20
