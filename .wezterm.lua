@@ -16,7 +16,6 @@ local opacity = 1
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.window_background_opacity = opacity
-config.window_background_image = background
 
 wezterm.on('toggle-opacity', function(window, pane)
   local overrides = window:get_config_overrides() or {}
