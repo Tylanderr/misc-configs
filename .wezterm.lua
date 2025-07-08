@@ -1,6 +1,11 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 
+wezterm.on("gui-startup", function()
+  local tab, pane, window = mux.spawn_window{}
+  window:gui_window():maximize()
+end)
+
 local config = wezterm.config_builder()
 config.default_domain = 'WSL:Ubuntu'
 config.check_for_updates = false
