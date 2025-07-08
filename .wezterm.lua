@@ -1,10 +1,10 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 
-wezterm.on("gui-startup", function()
-  local tab, pane, window = mux.spawn_window{}
-  window:gui_window():maximize()
-end)
+-- wezterm.on("gui-startup", function()
+--   local tab, pane, window = mux.spawn_window{}
+--   window:gui_window():maximize()
+-- end)
 
 local config = wezterm.config_builder()
 config.default_domain = 'WSL:Ubuntu'
@@ -17,26 +17,22 @@ config.font_size = 10
 config.term = "xterm-256color"
 config.enable_tab_bar = false
 
-config.window_background_image_hsb = { brightness = .003 }
-local background = 'C:\\Documents\\TermBG\\02.jpg'
+config.window_background_image_hsb = { brightness = .005 }
+local background = 'C:\\Documents\\TermBG\\07.jpg'
 local opacity = 1
 
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.window_background_opacity = opacity
-config.window_background_image = background
 
 wezterm.on('toggle-background', function(window, pane)
-  local overrides = window:get_config_overrides() or {}
-  local current = overrides.window_background_image
-  if current == nil then
-    overrides.window_background_image = ''
-  elseif current == '' then
-    overrides.window_background_image = background_image
-  else
-    overrides.window_background_image = ''
-  end
-  window:set_config_overrides(overrides)
+    local overrides = window:get_config_overrides() or {}
+    if not overrides.window_background_image then
+        overrides.window_background_image = background
+    else
+        overrides.window_background_image = nil
+    end
+    window:set_config_overrides(overrides)
 end)
 
 wezterm.on('toggle-opacity', function(window, pane)
