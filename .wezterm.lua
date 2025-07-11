@@ -60,7 +60,7 @@ config.keys = {
     action = wezterm.action.DisableDefaultAssignment,
   },
   {
-    key = 'O',
+    key = '`',
     mods = 'CTRL',
     action = wezterm.action.EmitEvent 'toggle-background',
   }
