@@ -50,7 +50,7 @@
     },
     {
       "uuid": "{74F5FD15-7892-4543-B39F-48B3A2E2E850}",
-      "name": "Sideby",
+      "name": "Landscape Split",
       "type": "canvas",
       "info": {
         "ref-width": 1920,
@@ -67,6 +67,30 @@
             "Y": 10,
             "width": 946,
             "height": 1012
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{E6E971EF-31FA-4E84-B654-3707DB9327B0}",
+      "name": "Portrait Split",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1080,
+        "ref-height": 1920,
+        "zones": [
+          {
+            "X": 10,
+            "Y": 10,
+            "width": 1060,
+            "height": 945
+          },
+          {
+            "X": 10,
+            "Y": 965,
+            "width": 1060,
+            "height": 945
           }
         ],
         "sensitivity-radius": 20
