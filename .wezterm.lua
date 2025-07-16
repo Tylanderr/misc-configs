@@ -1,10 +1,10 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 
-wezterm.on("gui-startup", function()
-  local tab, pane, window = mux.spawn_window{}
-  window:gui_window():maximize()
-end)
+-- wezterm.on("gui-startup", function()
+--   local tab, pane, window = mux.spawn_window{}
+--   window:gui_window():maximize()
+-- end)
 
 local config = wezterm.config_builder()
 config.default_domain = 'WSL:Ubuntu'
@@ -23,7 +23,7 @@ local opacity = 1
 local background = 'C:\\Documents\\TermBG\\02.jpg'
 config.window_background_image_hsb = { brightness = .0025 }
 config.window_background_opacity = opacity
-config.window_background_image = background
+-- config.window_background_image = background
 
 wezterm.on('toggle-background', function(window, pane)
   local overrides = window:get_config_overrides() or {}
@@ -62,7 +62,7 @@ config.keys = {
   {
     key = '.',
     mods = 'CTRL',
-    action = wezterm.action.EmitEvent 'toggle-background',
+    action = wezterm.action.EmitEvent 'toggle-opacity',
   }
 }
 
