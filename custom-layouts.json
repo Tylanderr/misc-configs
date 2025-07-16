@@ -10,9 +10,9 @@
         "zones": [
           {
             "X": 385,
-            "Y": 144,
+            "Y": 160,
             "width": 1150,
-            "height": 743
+            "height": 712
           },
           {
             "X": 10,
@@ -33,16 +33,76 @@
         "ref-height": 1920,
         "zones": [
           {
-            "X": 84,
-            "Y": 434,
-            "width": 909,
-            "height": 1042
+            "X": 80,
+            "Y": 455,
+            "width": 920,
+            "height": 1010
           },
           {
-            "X": 9,
-            "Y": 9,
-            "width": 1059,
-            "height": 1899
+            "X": 10,
+            "Y": 10,
+            "width": 1060,
+            "height": 1900
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{74F5FD15-7892-4543-B39F-48B3A2E2E850}",
+      "name": "Sideby",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1920,
+        "ref-height": 1032,
+        "zones": [
+          {
+            "X": 10,
+            "Y": 10,
+            "width": 946,
+            "height": 1012
+          },
+          {
+            "X": 964,
+            "Y": 10,
+            "width": 946,
+            "height": 1012
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{243A563B-E2C0-4464-B53B-8C31897FBC87}",
+      "name": "Main Simple",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1920,
+        "ref-height": 1032,
+        "zones": [
+          {
+            "X": 385,
+            "Y": 160,
+            "width": 1150,
+            "height": 712
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{7E654022-6686-4DDB-8E7C-84389EB1BC88}",
+      "name": "Vertical Simple",
+      "type": "canvas",
+      "info": {
+        "ref-width": 1920,
+        "ref-height": 1032,
+        "zones": [
+          {
+            "X": 142,
+            "Y": 244,
+            "width": 1635,
+            "height": 542
           }
         ],
         "sensitivity-radius": 20
