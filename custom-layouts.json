@@ -33,9 +33,9 @@
         "ref-height": 1920,
         "zones": [
           {
-            "X": 80,
+            "X": 65,
             "Y": 455,
-            "width": 920,
+            "width": 950,
             "height": 1010
           },
           {
@@ -119,14 +119,14 @@
       "name": "Vertical Simple",
       "type": "canvas",
       "info": {
-        "ref-width": 1920,
-        "ref-height": 1032,
+        "ref-width": 1080,
+        "ref-height": 1920,
         "zones": [
           {
-            "X": 142,
-            "Y": 244,
-            "width": 1635,
-            "height": 542
+            "X": 65,
+            "Y": 455,
+            "width": 950,
+            "height": 1010
           }
         ],
         "sensitivity-radius": 20
