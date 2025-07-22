@@ -5,20 +5,14 @@
       "name": "Main",
       "type": "canvas",
       "info": {
-        "ref-width": 1920,
-        "ref-height": 1032,
+        "ref-width": 2560,
+        "ref-height": 1392,
         "zones": [
           {
-            "X": 385,
-            "Y": 160,
-            "width": 1150,
-            "height": 712
-          },
-          {
-            "X": 10,
-            "Y": 10,
-            "width": 1900,
-            "height": 1012
+            "X": 513,
+            "Y": 215,
+            "width": 1533,
+            "height": 960
           }
         ],
         "sensitivity-radius": 20
@@ -33,16 +27,10 @@
         "ref-height": 1920,
         "zones": [
           {
-            "X": 65,
-            "Y": 455,
-            "width": 950,
-            "height": 1010
-          },
-          {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 1900
+            "X": 64,
+            "Y": 453,
+            "width": 949,
+            "height": 1009
           }
         ],
         "sensitivity-radius": 20
@@ -53,20 +41,20 @@
       "name": "Landscape Split",
       "type": "canvas",
       "info": {
-        "ref-width": 1920,
-        "ref-height": 1032,
+        "ref-width": 2560,
+        "ref-height": 1392,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 946,
-            "height": 1012
+            "X": 0,
+            "Y": 0,
+            "width": 1280,
+            "height": 1392
           },
           {
-            "X": 964,
-            "Y": 10,
-            "width": 946,
-            "height": 1012
+            "X": 1277,
+            "Y": 0,
+            "width": 1280,
+            "height": 1392
           }
         ],
         "sensitivity-radius": 20
@@ -81,16 +69,16 @@
         "ref-height": 1920,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 945
+            "X": 0,
+            "Y": 0,
+            "width": 1080,
+            "height": 959
           },
           {
-            "X": 10,
-            "Y": 965,
-            "width": 1060,
-            "height": 945
+            "X": 0,
+            "Y": 959,
+            "width": 1080,
+            "height": 961
           }
         ],
         "sensitivity-radius": 20
