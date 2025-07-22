@@ -18,9 +18,7 @@ config.term = "xterm-256color"
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
-
-local background = 'C:\\Documents\\WezTerm\\background.jpg'
-config.window_background_image = background
+config.window_background_image = 'C:\\Documents\\WezTerm\\bg\\01.jpg'
 
 wezterm.on('toggle-background', function(window, pane)
   local overrides = window:get_config_overrides() or {}
