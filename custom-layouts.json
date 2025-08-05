@@ -123,10 +123,10 @@
             "height": 1009
           },
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 1900
+            "X": 5,
+            "Y": 5,
+            "width": 1070,
+            "height": 1910
           }
         ],
         "sensitivity-radius": 20
@@ -161,20 +161,20 @@
       "name": "Portrait Split Gap",
       "type": "canvas",
       "info": {
-        "ref-width": 1080,
-        "ref-height": 1920,
+        "ref-width": 3072,
+        "ref-height": 1680,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 945
+            "X": 14,
+            "Y": 0,
+            "width": 3043,
+            "height": 835
           },
           {
-            "X": 10,
-            "Y": 965,
-            "width": 1060,
-            "height": 945
+            "X": 14,
+            "Y": 840,
+            "width": 3043,
+            "height": 835
           }
         ],
         "sensitivity-radius": 20
