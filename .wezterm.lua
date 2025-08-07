@@ -20,19 +20,16 @@ config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 
 config.window_background_opacity = 1
---config.window_background_image = 'C:\\Documents\\WezTerm\\TermBG\\01.jpg'
+local background = 'C:\\Documents\\WezTerm\\TermBG\\02.jpg'
 
 wezterm.on('toggle-background', function(window, pane)
-  local overrides = window:get_config_overrides() or {}
-  local current = overrides.window_background_image
-  if current == nil then
-    overrides.window_background_image = ''
-  elseif current == '' then
-    overrides.window_background_image = background_image
-  else
-    overrides.window_background_image = ''
-  end
-  window:set_config_overrides(overrides)
+    local overrides = window:get_config_overrides() or {}
+    if not overrides.window_background_image then
+        overrides.window_background_image = background
+    else
+        overrides.window_background_image = nil
+    end
+    window:set_config_overrides(overrides)
 end)
 
 wezterm.on('toggle-opacity', function(window, pane)
@@ -60,6 +57,11 @@ config.keys = {
     key = '.',
     mods = 'CTRL',
     action = wezterm.action.EmitEvent 'toggle-opacity',
+  },
+    {
+    key = '\'',
+    mods = 'CTRL',
+    action = wezterm.action.EmitEvent 'toggle-background',
   }
 }
 
