@@ -59,7 +59,7 @@ config.keys = {
     action = wezterm.action.EmitEvent 'toggle-opacity',
   },
     {
-    key = '/',
+    key = ',',
     mods = 'CTRL',
     action = wezterm.action.EmitEvent 'toggle-background',
   }
