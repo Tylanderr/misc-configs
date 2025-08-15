@@ -1,10 +1,10 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 
-wezterm.on("gui-startup", function()
-  local tab, pane, window = mux.spawn_window{}
-  window:gui_window():maximize()
-end)
+-- wezterm.on("gui-startup", function()
+--   local tab, pane, window = mux.spawn_window{}
+--   window:gui_window():maximize()
+-- end)
 
 local config = wezterm.config_builder()
 config.default_domain = 'WSL:Ubuntu'
@@ -13,7 +13,7 @@ config.check_for_updates = false
 config.audible_bell = "Disabled"
 config.color_scheme = 'Tokyo Night'
 config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
-config.font_size = 11
+config.font_size = 9.5
 config.term = "xterm-256color"
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
