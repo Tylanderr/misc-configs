@@ -12,16 +12,17 @@ config.check_for_updates = false
 
 config.audible_bell = "Disabled"
 config.color_scheme = 'Tokyo Night'
-config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 config.font_size = 9.5
+config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
+config.adjust_window_size_when_changing_font_size = false
 config.term = "xterm-256color"
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 
 config.window_background_opacity = 1
-local background = 'C:\\Documents\\WezTerm\\TermBG\\03.jpg'
-config.window_background_image = background
+local background = 'C:\\Documents\\WezTerm\\TermBG\\05.jpg'
+--config.window_background_image = background
 
 wezterm.on('toggle-background', function(window, pane)
     if not config.window_background_image then
