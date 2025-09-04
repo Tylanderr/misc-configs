@@ -1,8 +1,5 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
-local hostname = wezterm.hostname()
-
-print(hostname)
 
 -- wezterm.on("gui-startup", function()
 --   local tab, pane, window = mux.spawn_window{}
@@ -26,41 +23,25 @@ local current_font_size = 9.5
 config.font_size = current_font_size
 
 config.window_background_opacity = 1
-local background = 'C:\\Documents\\WezTerm\\TermBG\\05.jpg'
---config.window_background_image = background
+local background = 'C:\\Documents\\WezTerm\\TermBG\\06.jpg'
+config.window_background_image = background
 
 wezterm.on('toggle-background', function(window, pane)
-    if not config.window_background_image then
-      local overrides = window:get_config_overrides() or {}
-      if not overrides.window_background_image then
-          overrides.window_background_image = background
-      else
-          overrides.window_background_image = nil
-      end
-      window:set_config_overrides(overrides)
-    end
     if config.window_background_image then
       local overrides = window:get_config_overrides() or {}
       local current = overrides.window_background_image
       if current == nil then
         overrides.window_background_image = ''
+        overrides.window_background_opacity = 0.95
       elseif current == '' then
         overrides.window_background_image = background_image
+        overrides.window_background_opacity = nil
       else
         overrides.window_background_image = ''
+        overrides.window_background_opacity = nil
       end
       window:set_config_overrides(overrides)
     end  
-end)
-
-wezterm.on('toggle-opacity', function(window, pane)
-  local overrides = window:get_config_overrides() or {}
-  if not overrides.window_background_opacity then
-    overrides.window_background_opacity = 0.95
-  else
-    overrides.window_background_opacity = nil
-  end
-  window:set_config_overrides(overrides)
 end)
 
 wezterm.on('font-size-switch', function(window, pane)
@@ -89,15 +70,10 @@ config.keys = {
   {
     key = '.',
     mods = 'CTRL',
-    action = wezterm.action.EmitEvent 'toggle-opacity',
-  },
-  {
-    key = ',',
-    mods = 'CTRL',
     action = wezterm.action.EmitEvent 'toggle-background',
   },
   {
-    key = '/',
+    key = ',',
     mods = 'CTRL',
     action = wezterm.action.EmitEvent 'font-size-switch'
   }
