@@ -24,11 +24,11 @@ config.font_size = current_font_size
 
 config.window_background_opacity = 1
 local background = 'C:\\Documents\\WezTerm\\TermBG\\06.jpg'
-config.window_background_image = background
+--config.window_background_image = background
 
 wezterm.on('toggle-background', function(window, pane)
+    local overrides = window:get_config_overrides() or {}
     if config.window_background_image then
-      local overrides = window:get_config_overrides() or {}
       local current = overrides.window_background_image
       if current == nil then
         overrides.window_background_image = ''
@@ -40,8 +40,15 @@ wezterm.on('toggle-background', function(window, pane)
         overrides.window_background_image = ''
         overrides.window_background_opacity = nil
       end
-      window:set_config_overrides(overrides)
+    else
+      local current_opacity = overrides.window_background_opacity
+      if current_opacity == 1 then
+        overrides.window_background_opacity = 0.95
+      else
+        overrides.window_background_opacity = 1
+      end
     end  
+    window:set_config_overrides(overrides)
 end)
 
 wezterm.on('font-size-switch', function(window, pane)
