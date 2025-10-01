@@ -106,9 +106,9 @@
           },
           {
             "X": 5,
-            "Y": 5,
+            "Y": 10,
             "width": 1070,
-            "height": 1910
+            "height": 1900
           }
         ],
         "sensitivity-radius": 20
@@ -119,20 +119,20 @@
       "name": "Vertical Gap Split",
       "type": "canvas",
       "info": {
-        "ref-width": 3072,
-        "ref-height": 1680,
+        "ref-width": 1080,
+        "ref-height": 1920,
         "zones": [
           {
-            "X": 14,
-            "Y": 0,
-            "width": 3043,
-            "height": 835
+            "X": 5,
+            "Y": 10,
+            "width": 1070,
+            "height": 946
           },
           {
-            "X": 14,
-            "Y": 840,
-            "width": 3043,
-            "height": 835
+            "X": 5,
+            "Y": 964,
+            "width": 1070,
+            "height": 946
           }
         ],
         "sensitivity-radius": 20
