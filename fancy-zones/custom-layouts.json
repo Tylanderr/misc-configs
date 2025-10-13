@@ -2,18 +2,12 @@
   "custom-layouts": [
     {
       "uuid": "{C2F27440-1165-425B-B6BE-C5426C6EB35E}",
-      "name": "Main Gap",
+      "name": "Main",
       "type": "canvas",
       "info": {
         "ref-width": 3072,
         "ref-height": 1680,
         "zones": [
-          {
-            "X": 615,
-            "Y": 259,
-            "width": 1839,
-            "height": 1158
-          },
           {
             "X": 10,
             "Y": 10,
@@ -26,7 +20,7 @@
     },
     {
       "uuid": "{88C9AE7D-3ADC-44D7-AC61-99AC376A3821}",
-      "name": "Main Gap Split",
+      "name": "Main Split",
       "type": "canvas",
       "info": {
         "ref-width": 3072,
@@ -49,42 +43,24 @@
       }
     },
     {
-      "uuid": "{E1555375-60A2-4B03-80C4-A8201FF9F1EB}",
-      "name": "Main",
+      "uuid": "{F44BCEA1-3066-449B-B7F2-E5391DA7C537}",
+      "name": "Main Extra Zone",
       "type": "canvas",
       "info": {
-        "ref-width": 2560,
-        "ref-height": 1392,
+        "ref-width": 3072,
+        "ref-height": 1680,
         "zones": [
           {
-            "X": 513,
-            "Y": 215,
-            "width": 1533,
-            "height": 960
-          }
-        ],
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{74F5FD15-7892-4543-B39F-48B3A2E2E850}",
-      "name": "Main Split",
-      "type": "canvas",
-      "info": {
-        "ref-width": 2560,
-        "ref-height": 1392,
-        "zones": [
-          {
-            "X": 0,
-            "Y": 0,
-            "width": 1280,
-            "height": 1392
+            "X": 615,
+            "Y": 259,
+            "width": 1839,
+            "height": 1158
           },
           {
-            "X": 1280,
-            "Y": 0,
-            "width": 1280,
-            "height": 1392
+            "X": 10,
+            "Y": 10,
+            "width": 3052,
+            "height": 1660
           }
         ],
         "sensitivity-radius": 20
@@ -92,7 +68,7 @@
     },
     {
       "uuid": "{92AB64A3-D1EF-4E11-BE0D-C0F5F1752968}",
-      "name": "Vertical Gap",
+      "name": "Vertical",
       "type": "canvas",
       "info": {
         "ref-width": 1080,
@@ -110,7 +86,7 @@
     },
     {
       "uuid": "{B73D85D7-D2A7-4C1D-BF9C-98AA91DD351D}",
-      "name": "Vertical Gap Split",
+      "name": "Vertical Split",
       "type": "canvas",
       "info": {
         "ref-width": 1080,
@@ -133,8 +109,8 @@
       }
     },
     {
-      "uuid": "{4A650681-D324-4849-ACB6-14516DBBB71C}",
-      "name": "Vertical",
+      "uuid": "{DB1C6B83-5AF7-4A4C-A61D-75F5B3809EA5}",
+      "name": "Vertical Extra Zone",
       "type": "canvas",
       "info": {
         "ref-width": 1080,
@@ -142,33 +118,15 @@
         "zones": [
           {
             "X": 64,
-            "Y": 453,
+            "Y": 454,
             "width": 949,
             "height": 1009
-          }
-        ],
-        "sensitivity-radius": 20
-      }
-    },
-    {
-      "uuid": "{E6E971EF-31FA-4E84-B654-3707DB9327B0}",
-      "name": "Vertical Split",
-      "type": "canvas",
-      "info": {
-        "ref-width": 1080,
-        "ref-height": 1920,
-        "zones": [
-          {
-            "X": 0,
-            "Y": 0,
-            "width": 1080,
-            "height": 959
           },
           {
-            "X": 0,
-            "Y": 959,
-            "width": 1080,
-            "height": 961
+            "X": 10,
+            "Y": 10,
+            "width": 1060,
+            "height": 1900
           }
         ],
         "sensitivity-radius": 20
