@@ -1,30 +1,19 @@
 local wezterm = require 'wezterm'
-local mux = wezterm.mux
-
--- wezterm.on("gui-startup", function()
---   local tab, pane, window = mux.spawn_window{}
---   window:gui_window():maximize()
--- end)
-
 local config = wezterm.config_builder()
+
 config.default_domain = 'WSL:Ubuntu'
 config.check_for_updates = false
-
-config.audible_bell = "Disabled"
-config.color_scheme = 'Tokyo Night'
-config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
+config.enable_tab_bar = false
 config.adjust_window_size_when_changing_font_size = false
 config.term = "xterm-256color"
-config.enable_tab_bar = false
+config.audible_bell = "Disabled"
+config.color_scheme = 'Tokyo Night'
+config.font_size = 11
+config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
-
-local current_font_size = 9.5
-config.font_size = current_font_size
-
 config.window_background_opacity = 1
---local background = 'C:\\Documents\\WezTerm\\TermBG\\05.jpg'
-config.window_background_image = background
+-- config.window_background_image = 'C:\\Documents\\WezTerm\\TermBG\\03.jpg'
 
 wezterm.on('toggle-background', function(window, pane)
     local overrides = window:get_config_overrides() or {}
@@ -52,15 +41,17 @@ wezterm.on('toggle-background', function(window, pane)
 end)
 
 wezterm.on('font-size-switch', function(window, pane)
-  if current_font_size == 11 then
-    current_font_size = 9.5
+  local overrides = window:get_config_overrides() or {}
+
+  if config.font_size == 11 then
+    config.font_size = 9.5
   else
-    current_font_size = 11
+    config.font_size = 11
   end
 
-  window:set_config_overrides({
-    font_size = current_font_size
-  })
+  overrides.font_size = config.font_size
+  overrides.window_background_opacity = overrides.window_background_opacity or config.window_background_opacity
+  window:set_config_overrides(overrides)
 end)
 
 config.keys = {
@@ -72,6 +63,11 @@ config.keys = {
   {
     key = 'w',
     mods = 'CTRL|SHIFT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+  {
+    key = 'Enter',
+    mods = 'CTRL',
     action = wezterm.action.DisableDefaultAssignment,
   },
   {
