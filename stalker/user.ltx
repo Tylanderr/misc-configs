@@ -13,6 +13,8 @@ allow_silencer_hide_tracer 0
 allow_weapon_control_inertion_factor 0
 apply_pdm_to_ads 0
 default_controls
+bind left kLEFT
+bind right kPERIOD
 bind up kUP
 bind down kDOWN
 bind jump kSPACE
@@ -25,10 +27,10 @@ bind lstrafe kA
 bind rstrafe kD
 bind llookout kQ
 bind rlookout kE
-bind cam_zoom_in kRIGHT
+bind cam_zoom_in kZ
 bind cam_zoom_out kRBRACKET
 bind torch kL
-bind night_vision kN
+bind night_vision kX
 bind show_detector k4
 bind wpn_1 k1
 bind wpn_2 k2
@@ -40,6 +42,7 @@ bind wpn_next kT
 bind wpn_fire mouse1
 bind wpn_zoom mouse2
 bind wpn_reload kF10
+bind wpn_func kV
 bind wpn_firemode_prev k9
 bind wpn_firemode_next kB
 bind pause kPAUSE
@@ -49,10 +52,10 @@ bind quit kESCAPE
 bind console kGRAVE
 bind inventory kI
 bind active_jobs kEND
-bind quick_use_1 kZ
-bind quick_use_2 kX
-bind quick_use_3 kC
-bind quick_use_4 kV
+bind quick_use_1 kF1
+bind quick_use_2 kF2
+bind quick_use_3 kF3
+bind quick_use_4 kF4
 bind quick_save kF5
 bind quick_load kF9
 bind custom1 kNUMPAD1
@@ -71,8 +74,7 @@ bind custom22 kR
 bind custom24 mouse3
 bind safemode mouse5
 bind freelook kHOME
-bind_sec torch kLEFT
-bind_sec night_vision kCAPITAL
+bind_sec torch kC
 bind_sec inventory kTAB
 blend_move_anims off
 cam_inert 0.
@@ -206,7 +208,7 @@ g_recon_mindist 2.
 g_recon_minspeed 2.
 g_recon_show_speed 0.5
 g_simple_pda on
-g_sleep_time 9
+g_sleep_time 10
 g_sprint_toggle on
 g_unlimitedammo off
 g_use_tracers on
@@ -239,7 +241,7 @@ lua_gc_leak_print 0
 lua_gc_old 0
 lua_gcstep 800
 markswitch_color (0.000000, 0.000000, 0.000000, 0.000000)
-markswitch_count 1
+markswitch_count 6
 markswitch_current 0
 monster_stuck_fix 0
 mouse_buffer_size 1024
@@ -265,7 +267,7 @@ ph_timefactor 1.
 ph_tri_clear_disable_count 10
 ph_tri_query_ex_aabb_rate 1.3
 poltergeist_spawn_corpse_on_death 1
-power_loss_bias 0.3025
+power_loss_bias 0.265
 power_loss_factor 0.5
 precise_catspaw_dotmarks 0
 print_bone_warnings 1
@@ -467,6 +469,7 @@ rs_c_contrast 1.
 rs_c_gamma 1.
 rs_cam_pos off
 rs_refresh_60hz off
+rs_screenmode borderless
 rs_skeleton_update 32
 rs_stats off
 rs_v_sync off
@@ -495,7 +498,7 @@ shader_param_1 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_2 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_3 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_4 (0.000000, 0.000000, 0.000000, 0.000000)
-shader_param_5 (0.000000, 0.000000, 0.000000, 0.000000)
+shader_param_5 (1.000000, 0.000000, 0.000000, 0.000000)
 shader_param_6 (0.000000, 0.000000, 0.000000, 0.000000)
 shader_param_7 (100.000000, 0.500000, 0.000000, 0.000000)
 shader_param_8 (0.000000, 0.000000, 0.000000, 0.000000)
@@ -505,8 +508,8 @@ sil_glow_max_temp 0.15
 sil_glow_shot_temp 0.004
 slot_0 itm_actor_backpack
 slot_1 itm_actor_backpack
-slot_2 bandage
-slot_3 medkit
+slot_2 itm_actor_backpack
+slot_3 itm_actor_backpack
 smooth_ads_transition 0
 snd_acceleration on
 snd_cache_size 256
@@ -592,6 +595,3 @@ weapon_sway on
 wpn_aim_toggle off
 wpn_degradation 1.
 zoom_step_count 3.
-rs_borderless 1
-rs_fullscreen off
-rs_screenmode borderless
