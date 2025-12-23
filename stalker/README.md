@@ -5,6 +5,7 @@
 - Meatchunks 12gb prefetcher
 - CheekiTwoPelts
 - Unlimited stashes weight
+- Turn off Gamma tutorials
 
 # AOE
 - trans_outfit
