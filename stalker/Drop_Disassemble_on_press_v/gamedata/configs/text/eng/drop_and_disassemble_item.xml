@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="ui_mcm_menu_drop_and_disassemble_item">
+		<text>Drop and Disassemble</text>
+	</string>
+
+	<string id="ui_mcm_drop_and_disassemble_item_key_drop">
+		<text>Drop Item keybind</text>
+	</string>
+	<string id="ui_mcm_drop_and_disassemble_item_key_drop_desc">
+        <text>Press key to drop hovered item from inventory to the ground.</text>
+	</string>
+
+	<string id="ui_mcm_drop_and_disassemble_item_inventory_safe_drop">
+		<text>No dropping equipped items</text>
+	</string>
+	<string id="ui_mcm_drop_and_disassemble_item_inventory_safe_drop_desc">
+		<text>Prevent disassembling gear and weapons you have equipped.</text>
+	</string>
+
+	<string id="ui_mcm_drop_and_disassemble_item_key_disa">
+		<text>Disassemble Item keybind</text>
+	</string>
+	<string id="ui_mcm_drop_and_disassemble_item_key_disa_desc">
+        <text>Press key to disassemble hovered item from inventory.</text>
+	</string>
+
+	<string id="ui_mcm_drop_and_disassemble_item_inventory_safe_disa">
+		<text>No disassembling equipped items</text>
+	</string>
+	<string id="ui_mcm_drop_and_disassemble_item_inventory_safe_disa_desc">
+        <text>Prevent disassembling gear and weapons you have equipped.</text>
+	</string>
+
+	<string id="ui_mcm_drop_and_disassemble_item_DIT_compatibibility">
+		<text>Check when using Disassembly Item Tweaks</text>
+	</string>
+	<string id="ui_mcm_drop_and_disassemble_item_DIT_compatibibility_desc">
+        <text>Uses the toolkit function from DIT instead of base game.</text>
+	</string>
+</string_table>

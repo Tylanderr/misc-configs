@@ -1,0 +1,237 @@
+local mcm_keybinds = ui_mcm and ui_mcm.key_hold
+local KEY_DROP = DIK_keys.DIK_LSHIFT
+local KEY_DISA = DIK_keys.DIK_MINUS
+local INV_DROP_BOOL = true
+local INV_DISA_BOOL = true
+local DIT_FIX = false
+local obj_selected
+
+-- for G_ overwrite, otherwise not recognised
+local K_CTRL  = DIK_keys.DIK_LCONTROL
+local K_SHIFT = DIK_keys.DIK_LSHIFT
+local K_ALT   = DIK_keys.DIK_LMENU
+
+
+function on_mcm_load()
+    return {
+        id = "drop_and_disassemble_item",
+        sh = true,
+        gr = {
+            -- LuaFormatter off
+            {id = "title", type = "slide", link = "ui_options_slider_player", text = "drop and disassemble item", size = {512, 50}, spacing = 20},
+            {id = "key_drop", type = "key_bind", val = 2, def = KEY_DROP},
+			{id = "inventory_safe_drop", type = "check", val = 1, def = true},
+			{id = "key_disa", type = "key_bind", val = 2, def = KEY_DISA},
+			{id = "inventory_safe_disa", type = "check", val = 1, def = true},
+			{id = "DIT_compatibibility", type = "check", val = 1, def = false},
+            -- LuaFormatter on
+        }
+    }
+end
+
+local function on_option_change(mcm)
+    if mcm then
+        KEY_DROP = ui_mcm.get("drop_and_disassemble_item/key_drop") or KEY_DROP
+		KEY_DISA = ui_mcm.get("drop_and_disassemble_item/key_disa") or KEY_DISA
+		INV_DROP_BOOL = ui_mcm.get("drop_and_disassemble_item/inventory_safe_drop") or INV_DROP_BOOL
+		INV_DISA_BOOL = ui_mcm.get("drop_and_disassemble_item/inventory_safe_disa") or INV_DISA_BOOL
+		DIT_FIX = ui_mcm.get("drop_and_disassemble_item/DIT_compatibibility") or DIT_FIX
+    end
+end
+
+-- get item the mouse is over
+local function get_hover()
+	local bag = ui_inventory.GUI.hover.bag
+	local idx = ui_inventory.GUI.hover.idx
+	if idx then
+		return ui_inventory.GUI.CC[bag]:GetObj(idx)
+	end
+end
+
+-- if GUI gets focus, set variable
+local function ActorMenu_on_item_focus_receive(obj)
+	if inventory_flag and ui_inventory.GUI then
+		local obj = get_hover()
+		-- set variable
+		if obj then 
+			obj_selected = obj
+		else
+			obj_selected = nil
+		end
+	else
+		obj_selected = nil
+	end
+end
+
+-- if GUI loses focus, reset variable
+local function ActorMenu_on_item_focus_lost(obj)
+	obj_selected = nil
+end
+
+-- function used to get length of _G.SCANNED_SLOTS -> inventory slots in use.
+local function tablelength(T)
+	local count = 0
+	for _ in pairs(T) do count = count + 1 end
+	return count
+end
+
+-- find all slots, if selected item has same ID -> stop
+local function table_obj_check(obj_inp)
+	for i = 0, tablelength(_G.SCANNED_SLOTS) + 1, 1 do
+		local tmp = db.actor:item_in_slot(i)
+		if tmp and obj_inp:id() == tmp:id() then
+			return true
+		end
+	end
+	return false
+end
+
+function handle_disassembly(obj_selected)
+	if item_parts.menu_disassembly(obj_selected) then
+		-- check to disable inventory disassemble
+		if INV_DISA_BOOL and table_obj_check(obj_selected) then
+			return
+		end
+
+		-- if a tool has been found
+		local obj_tool = item_parts.get_suitable_dtool(obj_selected)
+		if obj_tool then
+			if DIT_FIX then
+				-- DIT has own suitable dtool function, let it redo the search.
+				item_parts.func_disassembly(obj_selected)
+			else
+				-- don't do get_suitable_dtool again, so give obj_tool
+				item_parts.func_disassembly(obj_selected, obj_tool)
+			end
+
+			-- FIX for inventory_box --not updating.
+			if gui_loot then
+				ui_inventory.GUI:On_Item_Update()
+			end
+		end
+	end
+end
+
+function on_key_press(key)
+	-- GUI check
+	if not inventory_flag then return end
+
+	-- OBJ selected using hover check
+	if not obj_selected then return end
+
+	-- GROK drop key functionality, do not allow in LOOT mode
+	if key == KEY_DROP and (not gui_loot) then
+
+		-- disables equipped drop, if selected in mcm
+		if INV_DROP_BOOL and table_obj_check(obj_selected) then
+			return
+		end
+
+		db.actor:drop_item(obj_selected)
+		-- ui_inventory.GUI:On_Item_Update()
+		obj_selected = nil
+
+	-- disassemble
+	elseif key == KEY_DISA then 
+		handle_disassembly(obj_selected)
+		obj_selected = nil
+		obj_tool = nil
+	end
+end
+
+-- refind obj_selected when key is released and user still hovers over same item
+function on_key_release(key)
+	-- inventory open flag and inventory open
+	if not inventory_flag and not ui_inventory.GUI then return end
+
+	-- keybind check, get item, save item.
+	if key == KEY_DROP or key == KEY_DISA then
+		local obj = obj or get_hover()
+		if obj then 
+			obj_selected = obj
+		else
+			obj_selected = nil
+		end
+	else
+		obj_selected = nil
+	end
+end
+
+-- Set flags to False
+local function ui_close()
+	-- ONLY CHECK if UI close is main inventory, not UI ANY close.
+	-- Bugs when closing details tab -> Found by DeadPain.
+	if not ui_inventory.GUI then
+		obj_selected = nil
+		inventory_flag = false
+		gui_loot = false
+	end
+end
+
+-- Set flags to True
+local function ui_open()
+	-- own inventory
+	if ui_inventory.GUI and ui_inventory.GUI.mode == "inventory" then
+		obj_selected = nil
+		inventory_flag = true
+		gui_loot = false
+
+	-- looting inventory -> gui_loot used to disable drop items
+	elseif ui_inventory.GUI and ui_inventory.GUI.mode == "loot" then
+		obj_selected = nil
+		inventory_flag = true
+		gui_loot = true
+
+	else
+		obj_selected = nil
+		inventory_flag = false
+		gui_loot = false
+	end
+end
+
+-- extra stuff to circumnavigate the GUI lock
+bind_stalker_ext.on_key_press = function(binder,key)
+	if (not KEYS_UNLOCK) then
+		-- send extra scriptcallback
+		if key == K_CTRL or key == K_SHIFT or key == K_ALT then			
+
+		-- overwrite bind_stalker_ext function; allow DROP and DISA keys during gui lock
+		-- TODO; replace with callback to not allow keybind overlap
+		elseif key == KEY_DROP or key == KEY_DISA then
+
+		else
+			return
+		end
+	end
+	SendScriptCallback("on_key_press",key)
+end
+
+bind_stalker_ext.on_key_release = function(binder,key)
+	if (not KEYS_UNLOCK) then
+		if key == K_CTRL or key == K_SHIFT or key == K_ALT then			
+		
+		-- overwrite bind_stalker_ext function; allow DROP and DISA keys during gui lock
+		-- TODO; replace with callback to not allow keybind overlap
+		elseif key == KEY_DROP or key == KEY_DISA then
+
+		else
+			return
+		end
+	end
+	SendScriptCallback("on_key_release",key)
+end
+
+--- start
+function on_game_start()
+	RegisterScriptCallback("on_option_change",on_option_change)
+
+	RegisterScriptCallback("on_key_press",on_key_press)
+	RegisterScriptCallback("on_key_release",on_key_release)
+
+	RegisterScriptCallback("ActorMenu_on_item_focus_receive", ActorMenu_on_item_focus_receive)
+	RegisterScriptCallback("ActorMenu_on_item_focus_lost", ActorMenu_on_item_focus_lost)
+
+	RegisterScriptCallback("GUI_on_hide", ui_close)
+	RegisterScriptCallback("GUI_on_show",ui_open)
+	on_option_change(mcm_keybinds)
+end
