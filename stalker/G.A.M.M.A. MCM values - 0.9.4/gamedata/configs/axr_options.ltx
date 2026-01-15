@@ -606,6 +606,11 @@
         dph_loot_cond/weapon/veteran_min = 10
         dph_loot_cond/weapon/zombied_max = 20
         dph_loot_cond/weapon/zombied_min = 10
+        drop_and_disassemble_item/DIT_compatibibility = false
+        drop_and_disassemble_item/inventory_safe_disa = true
+        drop_and_disassemble_item/inventory_safe_drop = true
+        drop_and_disassemble_item/key_disa = 21
+        drop_and_disassemble_item/key_drop = 42
         drop_item/key_drop               = 42
         drx_da/anomaly_amount_modifier   = 0.4
         drx_da/anomaly_zone_anomalies_distance_max = 20
@@ -698,9 +703,9 @@
         fast_travel_limiter/next_travel_inc = 6
         fast_travel_limiter/tax_multipler = 1.0
         fddar/backpack/enable            = false
-        fddar/backpack/max_speed         = 1.5
-        fddar/backpack/min_weight_multiplier = 50
-        fddar/backpack/type              = 1
+        fddar/backpack/max_speed         = 1.75
+        fddar/backpack/min_weight_multiplier = 100
+        fddar/backpack/type              = 0
         fddar/body_search/disable_walk   = true
         fddar/body_search/enable         = true
         fddar/body_search/enable_anm_for_containers = false
@@ -730,10 +735,10 @@
         fddar/outfit_anm/allow_movement  = true
         fddar/outfit_anm/always_short    = false
         fddar/outfit_anm/enable_backpack_equip = true
-        fddar/outfit_anm/enable_outfit_equip = true
+        fddar/outfit_anm/enable_outfit_equip = false
         fddar/outfit_anm/enable_patches  = true
         fddar/outfit_anm/enable_patches_inventory = true
-        fddar/outfit_anm/enable_plate_equip = true
+        fddar/outfit_anm/enable_plate_equip = false
         fddar/outfit_anm/keybind         = -1
         fddar/outfit_anm/memory          = true
         fddar/outfit_anm/memory_size     = 3
@@ -936,7 +941,7 @@
         grok_dd/check_tasks              = true
         grok_dd/enabled                  = true
         grok_dd/npc_threshold            = 40
-        haru_quick_action_wheel_mcm/controls/hold = true
+        haru_quick_action_wheel_mcm/controls/hold = false
         haru_quick_action_wheel_mcm/controls/keybind = 47
         haru_quick_action_wheel_mcm/controls/modifier = 0
         haru_quick_action_wheel_mcm/controls/override_ammo_wheel = false
@@ -1732,8 +1737,8 @@
         scop/scop_fov                    = 0.4
         scop/scope_fov                   = 0.6
         serious_the_job_can_wait/scan_mode_override = 0
-        session_id                       = 239
-        session_start                    = 1767042548000
+        session_id                       = 279
+        session_start                    = 1768365672000
         skill_system/debug               = false
         skill_system/exp_multiplier_endurance = 1.0
         skill_system/exp_multiplier_scavenging = 1.6
@@ -3232,7 +3237,7 @@
         gameplay/disguise/speed          = true
         gameplay/disguise/speed_factor   = 3
         gameplay/disguise/state          = true
-        gameplay/disguise/stay_time      = true
+        gameplay/disguise/stay_time      =
         gameplay/disguise/stay_time_factor = 8
         gameplay/disguise/weapon         = false
         gameplay/disguise/weapon_factor  = 1
@@ -3263,7 +3268,7 @@
         gameplay/silent_kills/sk_melee_enabled = true
         gameplay/silent_kills/sk_melee_hear_dist = 5
         gameplay/silent_kills/sk_suspect_dist = 10
-        modded_exes/optimizations/lua_gcstep = 900
+        modded_exes/optimizations/lua_gcstep = 800
         other/autosave_timer_new         = 0
         other/debug_error                = false
         other/debug_hud                  = false
@@ -3322,7 +3327,7 @@
         video/advanced/texture_lod       = 1
         video/advanced/tf_aniso          = 16
         video/advanced/v_sync            = false
-        video/advanced/vis_distance      = 1
+        video/advanced/vis_distance      = 1.5
         video/advanced/volumetric_lights = true
         video/basic/fov                  = 79.640648
         video/basic/hud_fov              = 0.65
@@ -3371,6 +3376,10 @@
         fov_changed                      = false
         fov_value                        = 0.65
         rspec_default                    = true
+ 
+[unlocked_factions]
+        greh                             = true
+        renegade                         = true
  
 [xrs_debug_tools]
         toggle_top_key                   = 2
