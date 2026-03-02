@@ -8,7 +8,7 @@ config.adjust_window_size_when_changing_font_size = false
 config.term = "xterm-256color"
 config.audible_bell = "Disabled"
 config.color_scheme = 'Tokyo Night'
-config.font_size = 11
+config.font_size = 1
 config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
@@ -72,12 +72,12 @@ config.keys = {
   },
   {
     key = '.',
-    mods = 'CTRL',
+    mods = 'ALT',
     action = wezterm.action.EmitEvent 'toggle-background',
   },
   {
     key = ',',
-    mods = 'CTRL',
+    mods = 'ALT',
     action = wezterm.action.EmitEvent 'font-size-switch'
   }
 }
