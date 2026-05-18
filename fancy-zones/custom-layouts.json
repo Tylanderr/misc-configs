@@ -9,10 +9,10 @@
         "ref-height": 1680,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 3052,
-            "height": 1660
+            "X": 5,
+            "Y": 5,
+            "width": 3062,
+            "height": 1670
           }
         ],
         "sensitivity-radius": 20
@@ -27,16 +27,16 @@
         "ref-height": 1680,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1520,
-            "height": 1660
+            "X": 5,
+            "Y": 5,
+            "width": 1530,
+            "height": 1670
           },
           {
-            "X": 1542,
-            "Y": 10,
-            "width": 1520,
-            "height": 1660
+            "X": 1537,
+            "Y": 5,
+            "width": 1530,
+            "height": 1670
           }
         ],
         "sensitivity-radius": 20
@@ -57,10 +57,10 @@
             "height": 1158
           },
           {
-            "X": 10,
-            "Y": 10,
-            "width": 3052,
-            "height": 1660
+            "X": 5,
+            "Y": 5,
+            "width": 3062,
+            "height": 1670
           }
         ],
         "sensitivity-radius": 20
@@ -75,10 +75,10 @@
         "ref-height": 1920,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 1900
+            "X": 5,
+            "Y": 5,
+            "width": 1070,
+            "height": 1910
           }
         ],
         "sensitivity-radius": 20
@@ -93,16 +93,16 @@
         "ref-height": 1920,
         "zones": [
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 946
+            "X": 5,
+            "Y": 1,
+            "width": 1070,
+            "height": 956
           },
           {
-            "X": 10,
-            "Y": 964,
-            "width": 1060,
-            "height": 946
+            "X": 5,
+            "Y": 959,
+            "width": 1070,
+            "height": 956
           }
         ],
         "sensitivity-radius": 20
@@ -123,10 +123,10 @@
             "height": 1009
           },
           {
-            "X": 10,
-            "Y": 10,
-            "width": 1060,
-            "height": 1900
+            "X": 5,
+            "Y": 5,
+            "width": 1070,
+            "height": 1910
           }
         ],
         "sensitivity-radius": 20
