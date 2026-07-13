@@ -2,8 +2,8 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 local normal_font_size = 11
 local compact_font_size = 9.5
-local opaque_bg = 1
-local translucent_bg = 0.95
+local solid_bg = 1
+local opaque_bg = 0.95
 
 config.default_domain = 'WSL:Ubuntu'
 config.check_for_updates = false
@@ -16,7 +16,7 @@ config.font_size = normal_font_size
 config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 config.window_decorations = 'RESIZE'
 config.window_close_confirmation = 'NeverPrompt'
-config.window_background_opacity = translucent_bg
+config.window_background_opacity = solid_bg
 -- config.window_background_image = 'C:\\Documents\\WezTerm\\TermBG\\03.jpg'
 
 wezterm.on('toggle-background', function(window, pane)
@@ -31,17 +31,17 @@ wezterm.on('toggle-background', function(window, pane)
       overrides.window_background_opacity = nil
     else
       overrides.window_background_image = ''
-      overrides.window_background_opacity = translucent_bg
+      overrides.window_background_opacity = opaque_bg
     end
   else
     local current_opacity = overrides.window_background_opacity
     if current_opacity == nil then
       current_opacity = config.window_background_opacity
     end
-    if current_opacity < opaque_bg then
-      overrides.window_background_opacity = opaque_bg
+    if current_opacity < solid_bg then
+      overrides.window_background_opacity = solid_bg
     else
-      overrides.window_background_opacity = translucent_bg
+      overrides.window_background_opacity = opaque_bg
     end
   end
   window:set_config_overrides(overrides)
