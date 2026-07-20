@@ -5,6 +5,8 @@ local compact_font_size = 9.5
 local solid_bg = 1
 local opaque_bg = 0.95
 
+local transparent_flag = true
+
 config.default_domain = 'WSL:Ubuntu'
 config.check_for_updates = false
 config.enable_tab_bar = false
@@ -16,8 +18,14 @@ config.font_size = normal_font_size
 config.font = wezterm.font 'CaskaydiaMono Nerd Font Mono'
 config.window_decorations = 'RESIZE'
 config.window_close_confirmation = 'NeverPrompt'
-config.window_background_opacity = solid_bg
+
 -- config.window_background_image = 'C:\\Documents\\WezTerm\\TermBG\\03.jpg'
+
+if transparent_flag == true then
+  config.window_background_opacity = opaque_bg
+else
+  config.window_background_opacity = solid_bg
+end
 
 wezterm.on('toggle-background', function(window, pane)
   local overrides = window:get_config_overrides() or {}
