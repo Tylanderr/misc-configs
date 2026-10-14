@@ -67,6 +67,36 @@
       }
     },
     {
+      "uuid": "{A9B043BD-A6CC-433F-ADFA-9B30BB5952D6}",
+      "name": "Meeting",
+      "type": "canvas",
+      "info": {
+        "ref-width": 3072,
+        "ref-height": 1680,
+        "zones": [
+          {
+            "X": 10,
+            "Y": 10,
+            "width": 2019,
+            "height": 1660
+          },
+          {
+            "X": 2034,
+            "Y": 10,
+            "width": 1028,
+            "height": 828
+          },
+          {
+            "X": 2034,
+            "Y": 843,
+            "width": 1028,
+            "height": 828
+          }
+        ],
+        "sensitivity-radius": 20
+      }
+    },
+    {
       "uuid": "{92AB64A3-D1EF-4E11-BE0D-C0F5F1752968}",
       "name": "Vertical",
       "type": "canvas",
