@@ -33,6 +33,7 @@ local function get_background_state(window)
 
   if not state then
     state = {
+      first_open = true,
       initial_width = dimensions.pixel_width,
       initial_height = dimensions.pixel_height,
       last_width = dimensions.pixel_width,
@@ -45,7 +46,7 @@ local function get_background_state(window)
   return state, state_key, dimensions
 end
 
--- Preserve the first observed dimensions across configuration reloads.
+-- Preserve startup state across configuration reloads.
 wezterm.on('window-config-reloaded', function(window)
   get_background_state(window)
 end)
@@ -53,12 +54,19 @@ end)
 wezterm.on('window-resized', function(window)
   local state, state_key, dimensions = get_background_state(window)
 
+  -- Only automatically change the background on the first real resize.
+  if not state.first_open then
+    return
+  end
+
   -- Ignore events that did not change the window's pixel dimensions.
   if dimensions.pixel_width == state.last_width
     and dimensions.pixel_height == state.last_height then
     return
   end
 
+  -- Consume the first resize before applying overrides.
+  state.first_open = false
   state.last_width = dimensions.pixel_width
   state.last_height = dimensions.pixel_height
   wezterm.GLOBAL[state_key] = state
